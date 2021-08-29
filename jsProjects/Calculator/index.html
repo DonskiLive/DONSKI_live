@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+	<div class="content">
+		<div class="header">
+			<a href="#">Calculator / Palindrome</a>
+
+		</div>
+		<div class="center">
+			<div id="grid-container">
+				<div class="element name">Calculator</div>
+				<input type="number" min='10' max='999' class="element plus-num1">
+				<div class="element plus">+</div>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element plus-num2">
+				<button class="element plus-equal math-btn" title="Click twice to clean the fields">add*</button>
+				<p class="element plus-res"></p>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element min-num1">
+				<div class="element min">-</div>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element min-num2">
+				<button class="element min-equal math-btn" title="Click twice to clean the fields">sub*</button>
+				<p class="element min-res"></p>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element mult-num1">
+				<div class="element mult">&middot;</div>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element mult-num2">
+				<button class="element mult-equal math-btn" title="Click twice to clean the fields">multiply*</button>
+				<p class="element mult-res"></p>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element div-num1">
+				<div class="element div">&divide;</div>
+				<input type="number" onKeyPress="if(this.value.length==7) return false;" class="element div-num2">
+				<button class="element div-equal math-btn" title="Click twice to clean the fields">div*</button>
+				<p class="element div-res"></p>
+				<p class="element attention">* double click on a button will clean the fields</p>
+			</div>
+			<div id="grid-container">
+				<div class="element name">Palindrome?</div>
+				<div class="yes-not"></div>
+				<input type="text" maxlength="25" class="element input-text">
+				<button class="element div-equal check-btn math-btn"
+					title="Click twice to clean the fields">check*</button>
+				<p class="element check-res"></p>
+				<p class="element attention2">* double click on a button will clean the fields</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/calculator-palindrome.js"></script>
+</body>
+
+</html>

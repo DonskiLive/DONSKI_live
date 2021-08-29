@@ -1,0 +1,835 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Lato, sans-serif;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+p{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #777;
+    text-align: center;
+}
+
+.divider{
+    height: 2px;
+    width: 80px;
+    margin-bottom: 10px;
+    background-color: #f57365;
+}
+
+/* Header */
+
+#header{
+    background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.21612394957983194) 70%, rgba(0,0,0,1) 100%), url('./../images/Tomatoes_Pasta.jpg') no-repeat;
+    height: 100vh;
+    max-height: 800px;
+    color: white;
+    text-align: center;
+    background-size: cover;
+}
+
+.start{
+    height: 100vh;
+    max-height: 800px;
+}
+
+.start{
+	animation: sunrise 3s linear;
+}
+
+@keyframes sunrise{
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: transparent;
+    }
+}
+
+#header .nav{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*  */
+    position: relative; /*  */
+}
+
+#header .logo{
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    background-color: #fe0804ca;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.move{
+	animation: logo-move 2s linear;
+}
+
+@keyframes logo-move{
+    from{
+        margin-left: 45%;
+    }
+    to{
+        margin-left: 0;
+        transform: rotate(-360deg);
+    }
+}
+
+#header .logo img{
+    animation: tada 2s 2s;
+    transition: transform 1s cubic-bezier(.27,.57,.42,1.68)
+}
+
+#header .container .nav .logo:hover img{
+    transform: scale(1.2);
+}
+
+#header .logo-800{
+    display: none;
+}
+
+#header .nav-500{
+    display: none;
+}
+
+.nav .logo img, #header .logo-800 img{
+    width: 100%;
+}
+
+/* --------------- Hamburger menu - start ------------------ */
+
+
+#header .container #navToggle{
+    align-self: flex-start;
+	position: relative;
+	top: 50px;
+	right: 50px;
+}
+
+#header .container #navToggle .drop-link{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.7);
+    padding: 0;
+}
+
+#header .container #navToggle .drop-link:hover{
+	color: tomato;
+}
+
+#header .container #navToggle input{
+	opacity: 0;
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	z-index: 15;
+}
+
+#header .container #navToggle input:hover{
+    cursor: pointer;
+}
+
+#header .container #navToggle input:hover ~span{
+    transform: scale(1.1);
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+
+#header .container #navToggle span{
+	display: block;
+	width: 32px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	background-color: white;
+	border-radius: 3px;
+	transition: all 0.5s linear;
+    z-index: 14;
+}
+
+#header .container #navToggle input:checked ~span{
+	transform: rotate(-45deg);
+	transform-origin: top right; 
+}
+
+#header .container #navToggle input:checked ~span:nth-child(3){
+	opacity: 0;
+}
+
+#header .container #navToggle input:checked ~span:nth-child(4){
+	transform: rotate(45deg);
+	transform-origin: bottom right;
+	margin-top: 8.5px;
+}
+
+#header .container #dropdown{
+	text-align: center;
+	position: absolute;
+    width: 180px;
+	padding: 40px 20px 20px 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+	list-style: none;
+	right: -15px;
+	top: -280px;
+	transition: all 1s linear;
+	border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
+    z-index: 11;
+}
+
+#header .container #navToggle input:checked ~ul{
+	top: -12px;
+}
+
+#header .container #dropdown li{
+	padding: 5px 5px;	
+	font-size: 18px;
+	_width: 120px;
+    transition: all 0.5s cubic-bezier(.27,.57,.42,1.68);
+    border-radius: 10px;
+}
+
+#header .container #dropdown li:hover{
+	transform: scale(1.2);
+	background-color: rgba(255, 0, 0, 0.4);
+}
+
+#header .container #dropdown li:hover .drop-link{
+	color: rgba(255, 255, 255);
+}
+
+
+/* --------------- Hamburger menu - end ------------------ */
+
+#header h3{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 60px;
+    font-size: 2.5rem;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#header h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+    animation: flipInX 3s;
+}
+
+#header #started{
+    display: inline-block;
+    margin: 20px 0 40px;
+    padding: 20px 80px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: heartBeat 2s 4s;
+    transition: background-color 0.5s, transform 0.5s cubic-bezier(.27,.57,.42,1.68);
+}
+
+#header #started:hover{
+    background-color: rgba(255, 0, 0, 0.411);
+    transform: scale(1.1);
+}
+
+#header h4{
+    color:rgba(255,255,255,0.7);
+    text-transform: uppercase;
+}
+
+#header h4 span{
+    font-weight: 700;
+    color:white;
+    text-decoration: underline;
+    transition: color 1s;
+}
+
+#header h4 span:hover{
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.8);
+}
+
+/* Info section */
+
+#info{
+    padding: 100px 0;
+}
+
+#info .cards-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#info .card{
+    margin: 0 20px;
+    flex-basis: calc(100%/3 - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#info .card-img{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border:2px solid black;
+    margin-bottom: 15px;
+    transition: box-shadow 1s, border 1s;
+}
+
+#info .card-img:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.4);
+    width: 101px;
+    height: 101px;
+    border:3px solid #f57365;
+    margin-bottom: 14px;
+}
+
+#info .card-img img{
+    width: 100%;
+}
+
+#info .card-img:hover img{
+    animation: rubberBand 1s;
+}
+
+#info .card h3{
+    font-size:1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#info::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #777;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* App section */
+
+#app-section .container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#app-section .phone-block{
+    width: 300px;
+    height: 420px;
+    margin-left: auto;
+    position: relative;
+    background: url('./../images/iphone_blank.png') no-repeat;
+    background-size: 100%;
+    align-self: flex-end;
+}
+
+.ding-ding{
+    animation: vibration 10s linear infinite
+}
+
+@keyframes vibration{
+    0%{
+        transform: rotate(0deg);
+	transform-origin: 50% 50%;
+    }
+    1%, 91%, 97%{
+        transform: rotate(5deg) scale(1.1);
+    }
+    3%, 93%, 99%{
+        transform: rotate(-5deg);
+    }
+    4%, 90%, 94%, 96%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+#app-section .call-me{
+    width: 300px;
+    height: 420px;
+    margin-left: auto;
+    position: relative;
+    background: url('./../images/iphone_img.png') no-repeat;
+    background-size: 100%;
+    align-self: flex-end;
+}
+
+/* #app-section .phone-block:hover{
+    animation: tada 1s;
+} */
+
+.flash{
+	animation: flash 10s linear infinite;
+}
+
+@keyframes flash {
+	from{
+        opacity: 0;
+    }
+    15%, 85%{
+        opacity: 0;
+    }
+    25%, 75%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+#app-section .phone-block img{
+    position: absolute;
+    top:25%;
+    right: 8%;
+    width: 78%;
+}
+
+#app-section .text-block{
+    padding-right: 40px;
+    flex-basis: 50%;
+    margin-left: auto;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 50px;
+}
+
+#app-section h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 30px 0 10px;
+}
+
+#app-section p{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-right: 10px;
+    height: 39px;
+    width: 112px;
+}
+
+.btn_appstore{
+    background-image: url('./../images/btn_appstore.png');
+}
+
+.btn_appstore:hover, .btn_g_play:hover{
+    animation: swing 1s;
+    cursor: pointer;
+}
+
+.btn_g_play{
+    background-image: url('./../images/btn_g_play.png');
+    background-size: 112px 39px;
+}
+
+/* Comment section */
+
+#comments-section{
+    position: relative;
+    top:-40px;
+    text-align: center;
+    padding: 70px 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.8) 0%,
+        rgba(0,0,0,0.2) 100%
+    ),
+    url('./../images/Tomatoes_Pasta.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#comments-section p{
+    color:#fff;
+}
+
+#comments-section .avatar{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    border: 4px solid #777;
+}
+
+#comments-section .avatar img{
+    position: absolute;
+    left: -25px;
+    top:-10px;
+}
+
+#comments-section .message{
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    margin-top: 10px;
+}
+
+#comments-section .signature{
+    font-style: italic;
+    font-weight: 200;
+    padding-top: 10px;
+}
+
+.bottom-nav .dot{
+    background-color: #fff;
+    opacity: 0.6;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 20px 5px 0;
+    transition: opacity 1s;
+}
+
+.bottom-nav .dot:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Menu section */
+
+#menu-section h2{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.8rem;
+	color: black;
+	font-weight: 700;
+	padding: 30px 0px 40px 0px;
+	text-transform: uppercase;
+}
+
+#orange-line{
+	padding: 0px 0px 5px 0px;
+	border-bottom: 4px solid orange;
+}
+
+#menu-section .menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	height: 308px;
+	width: 100%;
+    margin-bottom: 30px;
+}
+
+#menu-section .menu .menu-card{
+    _position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	flex-basis: calc(100%/5 - 4px);
+	align-items: center;
+	justify-content:center;
+    
+}
+
+#menu-section .menu .menu-card .card-content{
+	position: absolute;
+	opacity: 0;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+	transition: all 0.5s linear;
+}
+
+#menu-section .menu .menu-card:hover .card-content{
+	opacity: 1;
+	cursor: pointer;
+}
+
+#menu-section .menu .menu-card p{
+    position: relative;
+	font-style: italic;
+	font-size: 1.1vw;
+	padding: 0;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 400;
+    
+}
+
+#menu-section .menu .menu-card p:hover{
+cursor: pointer;
+}
+
+#menu-section .menu .menu-card h2{
+    position: relative;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5vw;
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-top: 5px;
+    transition: all 0.5s linear;
+}
+
+#menu-section .menu .menu-card:hover h2{
+    font-size: 2.3vw;
+    cursor: pointer;
+}
+
+.menu .num1{
+    height: 150px;
+	background: url(./../images/italian.png) no-repeat center;
+	background-size: cover;
+}
+
+.menu .num2{
+	background: url(./../images/american.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num3{
+	background: url(./../images/chinese.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num4{
+	background: url(./../images/french.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num5{
+	background: url(./../images/indian.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num6{
+	background: url(./../images/mexican.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num7{
+	background: url(./../images/sea_food.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num8{
+	background: url(./../images/pizza.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num9{
+	background: url(./../images/sushi.png) no-repeat center;
+    background-size: cover;
+}
+
+.menu .num10{
+	background: url(./../images/italian.png) no-repeat center;
+    background-size: cover;
+}
+
+.zoom{
+    transition: all 0.5s linear;
+}
+.zoom:hover{
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+/* ----------- Adding of Media Query ----------- */
+
+@media screen and (max-width: 800px) {
+    /* Header */
+    .container{
+        width: 80%;
+    }
+    #header .nav{
+        justify-content: flex-end;
+    }
+    #header .container #dropdown{
+	right: -78px;
+    }
+    #header .logo{
+        display: none;
+    }
+    #header .logo-800{
+        display: block;
+        margin: 20px auto 0px auto;
+        width: 180px;
+        height: 180px;
+        padding: 20px;
+        background-color: #fe0804ca;
+        border-radius: 50%;
+        animation: tada 2s 1s;
+    }
+    #header h3{
+    margin-top: 40px;
+    font-size: 1.8rem;
+    }
+    #header h1{
+        font-size: 6rem;
+    }
+    #header a{
+        padding: 15px 60px;
+    }
+    #header h4{
+        display: none;
+    }
+
+    /* Info section */
+    #info .card-img{
+        width: 80px;
+        height: 80px;
+    }
+    #info .card h3{
+        font-size:2.1vw;
+    }
+    .divider{
+        width: 60px;
+    }
+
+    /* App section */
+    #app-section .phone-block{
+        display: none;
+    }
+    #app-section .text-block{
+        padding-right: 0px;
+        flex-basis: 100%;
+        margin-bottom: 150px;
+        text-align: center;
+    }
+    .text-block .divider{
+        display: inline-block;
+        width: 80px;
+    }
+    #app-section .text-block p{
+        text-align: center;
+    }
+
+    /* Menu section */    
+    #menu-section h2{
+        font-size: 1.3rem;
+    }
+    #orange-line{
+        border-bottom: 3px solid orange;
+    }
+    #menu-section .menu{
+        height: 462px;
+    }
+    #menu-section .menu .menu-card{
+        height: 150px;
+        flex-basis: calc(100%/3 - 4px);
+    }
+    #menu-section .menu .menu-card p{
+        font-size: 2vw;
+    }
+    #menu-section .menu .menu-card h2{
+        font-size: 3.5vw;
+    }
+    #menu-section .menu .menu-card:hover h2{
+    font-size: 4.3vw;
+    }
+    #menu-section .menu #hidden{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #header .nav{
+        padding: 0;
+    }
+    #header .logo-800{
+        margin: 80px auto 0px auto;
+    }
+    #header h3{
+    font-size: 1.7rem;
+    }
+    #header h1{
+        font-size: 5rem;
+    }
+    #header a{
+        padding: 10px 50px;
+    }
+    #header h4{
+        display:inline-block;
+    }
+    #get{
+        display: block;
+    }
+
+    /* Info section */
+    #info .cards-box{
+        flex-wrap: wrap;
+    }
+    #info .card{
+        margin: 0px 0px 30px 0px;
+        flex-basis: 100%;
+    }
+    #info .card-img{
+        width: 100px;
+        height: 100px;
+    }
+    #info .card-img img{
+        width: 100%;
+    }
+    #info .card h3{
+        font-size:1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .divider{
+        width: 80px;
+    }
+
+    /* Menu section */    
+    #menu-section h2{
+        font-size: 1.3rem;
+    }
+    #orange-line{
+        border-bottom: 3px solid orange;
+    }
+    #menu-section .menu{
+        height: 770px;
+    }
+    #menu-section .menu .menu-card{
+        height: 150px;
+        flex-basis: calc(100%/2 - 4px);
+    }
+    #menu-section .menu .menu-card p{
+        font-size: 3vw;
+    }
+    #menu-section .menu .menu-card h2{
+        font-size: 5.3vw;
+    }
+    #menu-section .menu .menu-card:hover h2{
+        font-size: 6.1vw;
+    }
+    #menu-section .menu #hidden{
+        display: flex;
+    }
+}

@@ -1,0 +1,93 @@
+body{ 
+	background: url(./img/background_image.jpg) no-repeat bottom center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1{
+	font-family: Nanum Gothic, sans-serif;
+	color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	font-weight:lighter;
+	margin-top: 100px;
+}
+
+table{
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 50px;
+	width: 70%;
+	border: 2px solid rgba(0, 0, 255, 0.6);
+}
+
+.raw1{
+	width: 100%;
+	height: 160px;
+	background-image: url(./img/klipartz.png);
+	background-color: rgba(0, 81, 255, 0.3);
+	background-size: 8%;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+.raw2{
+	width: 50%;
+	height: 220px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.raw2 h3{
+	font-family: Nanum Gothic, sans-serif;
+	color: green;
+	text-align: center;
+}
+
+.raw2 p{
+	font-family: Nanum Gothic, sans-serif;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+}
+
+
+#email{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border: 2px solid rgba(0, 0, 255, 0.6);
+	width: 300px;
+	font-family: Nanum Gothic, sans-serif;
+	font-size: 16px;
+	line-height: 2;
+}
+
+#button{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: rgba(0, 128, 0, 0.5);
+	color: white;
+	font-family: Nanum Gothic, sans-serif;
+	font-size: 20px;
+	margin-top: 10px;
+	width: 310px;
+	border: 2px solid rgba(0, 0, 255, 0.6);
+	border-radius: 15px 15px 15px 15px;
+	line-height: 1.5;
+}
+
+.raw3{
+	background-color: rgba(0, 128, 0, 0.5);
+	color: white;
+	font-family: Nanum Gothic, sans-serif;
+	text-align: center;
+	align-items: center;
+	width: 25%;
+}
+
+.img{
+	width: 70%;
+}

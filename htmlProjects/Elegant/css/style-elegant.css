@@ -1,0 +1,462 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+.container{
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* -------------- Section 1 ----------------- */
+
+.section-1{
+	height: 100vh;
+	max-height: 800px;
+	position: relative;
+	background: linear-gradient( rgba(131, 98, 77, 0.6), rgba(0, 0, 0, 0.5) ),  url(./../img/Elegant/img_8.jpeg) no-repeat center;
+	background-size: cover;
+	text-transform: uppercase;
+}
+
+.nav-logo{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+
+.nav-logo h3{
+	font-weight: 400;
+	text-align: left;
+	font-size: 20px;
+	color: white;
+}
+
+.container .nav-logo ul{
+	list-style: none;
+}
+
+.nav-logo ul li{
+	text-align: center;
+	float: right;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px 0px;
+}
+
+.dropdown ul{
+	padding-top: 10px;
+	position: absolute;
+	display: none;
+	width: 130px;
+}
+
+.nav-logo ul .dropdown:hover ul{
+	display: block;
+}
+
+.nav-logo ul li a{
+	font-family: 'Open Sans', sans-serif;
+	color: inherit;
+	text-decoration: none;
+	font-size: 16px;
+	color: white;
+	font-weight: 400;
+}
+
+.nav-logo ul li a:hover{
+	color: rgba(255, 255, 255, 0.651);
+}
+
+.dropdown ul li{
+	width: 110px;
+	text-align: left;
+}
+
+.main-text{
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	_flex-basis: 300px;
+
+	align-items: flex-start;
+	margin-top: 10%;
+}
+
+.main-text h2{
+	font-size: 18px;
+	margin-top: 50px;
+	font-weight: 400;
+}
+
+.main-text h1{
+	text-transform: none;
+	font-size: 72px;
+	margin: 35px 0px 50px;
+}
+
+/* ------------ Section 2 --------------- */
+
+.section-2{
+	height: 60vh;
+	position: relative;
+}
+
+.container .cards{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.cards .card{
+	display: flex;
+	flex-direction: column;
+	flex-basis: calc(100%/4 - 2%);
+	align-items: center;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: white;
+}
+
+.card .img:hover{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border-color: rgba(0, 0, 0, 0.6);
+}
+
+.card .img{
+	margin-top: 25px;
+	background-size: 100%;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-color: #ff214f;
+	cursor: pointer;
+}
+
+.pic-1{
+	background: url(./../img/Elegant/icon-1.png) no-repeat center;
+}
+
+.pic-2{
+	background: url(./../img/Elegant/icon-2.png) no-repeat center;
+}
+
+.pic-3{
+	background: url(./../img/Elegant/icon-3.png) no-repeat center;
+}
+
+.pic-4{
+	background: url(./../img/Elegant/icon-4.png) no-repeat center;
+}
+
+.section-2 .card h3{
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	margin: 30px 20px 0px 20px;
+	color: black;
+}
+
+.section-2 .card p{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin: 20px 30px 40px 30px;
+	color: #808080;
+	font-style: italic;
+	line-height: 1.8;
+}
+
+.positioning{
+	width: 80%;
+	position: absolute;
+	top: -100px;
+	left: 10%;
+}
+
+
+/* ------------ Section 3 ---------------- */
+
+.section-3{
+	height: 100vh;
+	max-height: 800px;
+	position: relative;
+	background: url(./../img/Elegant/img_10.jpeg) no-repeat center;
+	background-size: cover;
+	text-transform: uppercase;
+}
+
+.text{
+	margin-left: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 50%;
+	padding-top: 70px;
+}
+
+.text-box1{	
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #f2f2f2;
+	margin-bottom: 20px;
+}
+
+.text-box1 h4{
+	font-size: 18px;
+	color: #ff214f;
+	font-weight: 400;
+	letter-spacing: 1px;
+	padding: 40px 30px 20px 30px;
+	text-transform: none;
+}
+
+.text-box1 h3{
+	font-size: 24px;
+	padding-left: 30px;
+	color: black;
+	text-transform: none;
+}
+
+.text-box1 p{
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(0, 0, 0, 0.7);
+	font-size: 16px;
+	padding: 40px 30px 30px 30px;
+	text-transform: none;
+	line-height: 1.8;
+}
+
+
+.text-box2{	
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.text-box2 .text-cards{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.text-cards .text-card{
+	display: flex;
+	flex-direction: column;
+	flex-basis: calc(50% - 10px);
+	background-color: #f2f2f2;
+}
+
+.text-box2 img{
+	margin-top: 15px;
+	margin-left: 10px;
+	width: 70px;
+	height: 70px;
+}
+
+.text-box2 h3{
+	padding: 10px 20px 20px 20px;
+	color: black;
+	font-size: 18px;
+	text-transform: none;
+}
+
+.text-box2 p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	padding: 0px 20px 30px 20px;
+	text-transform: none;
+	color: black;
+	line-height: 1.8;
+	font-style: italic;
+}
+
+/* ------------ Section 4 ---------------- */
+
+.section-4{
+	height: 330px;
+	position: relative;
+}
+
+.container-4{
+	width: 100%;
+	height: 100%;
+	display: flex;	
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.container-4 .part{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 25%;
+	background-color: black;
+}
+
+.photo-1{
+	background: url(./../img/Elegant/img_2.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.photo-2{
+	background: url(./../img/Elegant/img_6.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.container-4 .part h4{
+	font-size: 18px;
+	color: #ff214f;
+	padding: 20px;
+	padding-top: 40px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.container-4 .part h3{
+	font-size: 20px;
+	color: white;
+	line-height: 1.2;
+	font-weight: 400;
+	padding: 0px 20px 20px 20px;
+}
+
+.container-4 .part p{
+	padding: 0px 20px 10px 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.8;
+	color: #808080;
+}
+
+.container-4 .part a{
+	padding: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #ff214f;
+	text-decoration: none;
+}
+
+/* ------------ Section 5 ---------------- */
+
+.section-5{
+	height: 100vh;
+	max-height: 800px;
+	position: relative;
+}
+
+.section-5 .container h3{
+	text-align: center;
+	font-size: 18px;
+	color: #ff214f;
+	font-weight: 400;
+	letter-spacing: 1px;
+	padding-top: 70px;
+}
+
+.section-5 .container h2{
+	font-size: 24px;
+	color: black;
+	margin: 20px 20px 40px 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.images{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	height: 500px;
+	width: 100%;
+}
+
+.images .border{
+	display: flex;
+	flex-direction: column;
+	height: 225px;
+	/* flex-basis: calc(100%/4 - 10px);  */
+	width: calc(100%/4 - 20px);
+	align-items: center;
+	justify-content:center;
+}
+
+.images .img1{
+	background: url(./../img/Elegant/img_4.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img2{
+	background: url(./../img/Elegant/img_9.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img3{
+	background: url(./../img/Elegant/img_12.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img4{
+	background: url(./../img/Elegant/img_1.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img5{
+	background: url(./../img/Elegant/img_14.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img6{
+	background: url(./../img/Elegant/img_3.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img7{
+	background: url(./../img/Elegant/img_5.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.images .img8{
+	background: url(./../img/Elegant/img_11.jpeg) no-repeat center;
+	background-size: cover;
+}
+
+.link-up{	
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	padding: 15px;
+	text-align: center;
+	background: url(./../img/Elegant/Up-icon.png) no-repeat center;
+	background-position: -5px -2px;
+	background-size: 120%;
+	border-radius: 50%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.link-up:hover{
+	width: 48px;
+	height: 48px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.4);
+}
+
+.white-up{
+	box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+}
+
+.white-up:hover{
+	box-shadow: 0 14px 28px rgba(255, 255, 255, 0.4), 0 10px 10px rgba(255, 255, 255, 0.4);
+}

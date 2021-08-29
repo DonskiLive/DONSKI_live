@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Game Word</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+	<div class="content">
+		<div class="header">
+			<a href="#">Guess the word</a>
+
+		</div>
+
+
+		<div class="center">
+			<h1>Guess the word</h1>
+			<div class="box">
+				<p id="message">I riddled the word. Will you try to guess it?<br><br> To start the game select the
+					language and press start</p>
+				<form id="language" action="#">
+					<input id="eng" type="radio" name="language" checked="checked"><label for="eng">English</label>
+					<input id="rus" type="radio" name="language"><label for="rus">Russian</label>
+				</form>
+				<p id="wordState" style="font-size: 48px; font-weight: 700;"></p>
+				<p id="info"></p>
+				<input type="text" id="userAnswer">
+				<br />
+				<a href="#" id="startBtn">Start</a>
+				<a href="#" id="checkBtn">Check</a>
+			</div>
+
+		</div>
+	</div>
+	<div class="footer">
+		Copyright &copy; DONSKI.live
+	</div>
+	<script src="./guessWord.js"></script>
+</body>
+
+</html>

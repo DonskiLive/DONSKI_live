@@ -1,0 +1,61 @@
+body{
+	font-family: 'PT snas', sans-serif;
+}
+
+ul, li{
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+h1,h2,h3{
+	font-weight: 700;
+}
+
+/* Header */
+
+.bg-yellow{
+	background-color: #fcdb00;
+}
+
+.menu-item a{
+	color: black;
+	font-size: 22px;
+	font-weight: 700;
+
+}
+
+.icons li a{
+	transition: all 0.3s ease;
+}
+
+.icons li a:hover{
+	color: #ff4800 !important;
+}
+
+.contact{
+	background-color: black;
+}
+
+.yellow{
+	color: #fcdb00;
+}
+
+.form-input{
+	border-radius: 5px;
+	_width: 580px;
+	outline: none;
+}
+
+.form-btn{
+	background-color: #fcdb00;
+	color: black;
+	_width: 125px;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+footer{
+	background-color: black;
+}

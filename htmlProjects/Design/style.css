@@ -1,0 +1,321 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Montserrat, Helvetica, sans-serif;
+	color: white;
+}
+
+.clearfix{
+	clear: both;
+}
+
+.section-one{
+	position: relative;
+	background: url(./img/bg.png) no-repeat fixed;
+	background-size: cover;
+	height: 100vh;
+	max-height: 800px;
+}
+
+.mail-logo{
+	width: 50px;
+	height: 50px;
+	background: url(./img/icon_envelope.png) center center no-repeat;
+	background-size: 50%;
+	background-color: #FFA513;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.mail-logo:hover{
+	width: 60px;
+	height: 60px;
+	border: 2px solid white;
+	bottom: 15px;
+	right: 15px;
+}
+
+.container{
+	height: 100%;
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.main-logo{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 20px;
+	left: 50px;
+}
+
+.container{
+	width: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.container nav{
+	margin-top: 20px;
+}
+
+.container nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	width: 130px;
+	float: right;
+	margin-left: 5px;
+	padding: 10px 0px;
+	background-color: transparent;
+}
+
+nav ul li:hover{
+	background-color: #253646;
+}
+
+.dropdown ul{
+	padding-top: 10px;
+	position: absolute;
+	display: none;
+	width: 130px;
+}
+
+nav ul .dropdown:hover ul{
+	display: block;
+}
+
+nav ul li a{
+	padding-left: 25px;
+	color: inherit;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.text-box{
+	width: 500px;
+	margin: 180px auto;
+	text-align: center;
+}
+
+.text-box h1{
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 25px;
+}
+
+.text-box p{
+	padding: 20px 0;
+	font-size: 14px;
+}
+
+.text-box a{
+	display: inline-block;
+	border: 2px solid white;
+	border-radius: 20px;
+	padding: 10px 30px;
+	margin: 15px 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+#view img{
+	padding-top: 2px;
+	padding-right: 10px;
+	float: left;
+}
+
+.text-box #more{
+	background-color: #FFA513;
+}
+
+.text-box #more:hover, .text-box #view:hover{
+	background-color: #ffa51365;
+}
+
+
+/* ------------------ Section two ---------------- */
+
+.section-two{
+	height: 100vh;
+	max-height: 800px;
+}
+
+.section-two .container{
+	background-color: #38E017;
+	overflow: visible;
+}
+
+.section-two .dropdown ul{
+	z-index: 10;
+	background-color: #2536468c;
+}
+
+.section-two .text{
+	color: black;
+	position: absolute;
+	top: 200px;
+	left: -55px;
+	width: 450px;
+	height: fit-content;
+	
+}
+
+.section-two .text h1{
+	text-transform: uppercase;
+	font-size: 36px;
+}
+
+.section-two .text p{
+	margin: 60px auto 80px auto;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.section-two .text .button{
+	text-transform: uppercase;
+	padding: 10px 30px;
+	color: rgba(255, 255, 255);
+	font-size: 18px;
+	font-weight: 500;
+	background-color: black;
+	text-decoration: none;
+}
+
+.section-two .container .image{
+	position: absolute;
+	right: -60px;
+	top: 45px;
+	background: url(./img/pexels-photo-3908076.jpeg) center center;
+	width: 520px;
+	height: 90vh;
+	background-size: 100%; 
+}
+
+
+/* ------------------ Section three ---------------- */
+
+.section-three{
+	height: 100vh;
+	max-height: 800px;
+}
+
+.section-three .container{
+	height: 730px;
+}
+
+.section-three nav ul li{
+	color: black;
+}
+
+.section-three nav ul li:hover{
+	background-color:rgba(255, 255, 0, 0.5);
+}
+
+.section-three .dropdown ul{
+	z-index: 10;
+}
+
+.container .info{
+	position: absolute;
+	right: 135px;
+	background-color: #21B9CA;
+	width: 355px;
+	height: 320px;
+}
+
+.info h1{
+	padding: 20px 10px 20px 20px;
+	font-weight: 600;
+	font-size: 30px;
+}
+
+.info p{
+	padding: 0px 15px 20px 20px;
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.info .source{
+	font-style: italic;
+	font-size: 12px;
+}
+
+.info a{
+	color: rgba(255, 255, 255, 0.6);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.section-three .info .read-more{
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px 20px;
+	margin-left: 20px;
+	border: 1px solid #167580a6;
+	border-radius: 2px;
+	display: inline-block;
+	color: #21B9CA;
+	background-color: white;
+	text-decoration: none;
+}
+
+.section-three .container .ring{
+	background-color: white;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 22px solid #21B9CA;
+	position: absolute;
+	top: 320px;
+	left: 200px;
+}
+
+.section-three .container .image1{
+	height: 340px;
+	width: 340px;
+	background: url(./img/try-min.jpeg) top center no-repeat;
+	background-size: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 340px;
+	left: 220px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0,0,0,0.3);
+}
+
+.section-three .container .image2{
+	height: 160px;
+	width: 160px;
+	background: url(./img/sdfee.jpeg) center right no-repeat;
+	background-size: 110%;
+	border-radius: 50%;
+	border: 8px solid #21B9CA;
+	position: absolute;
+	top: 540px;
+	left: 475px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0,0,0,0.3);
+}
+
+.section-three .container .dot{
+	background-color: #21B9CA;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	position: absolute;
+	top: 600px;
+	left: 220px;
+}
