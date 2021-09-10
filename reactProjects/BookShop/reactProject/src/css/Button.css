@@ -1,0 +1,39 @@
+.button-style{
+	font-size: 20px;
+	width: 100px;
+	padding: 5px 0;
+	margin: 5px 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 1px solid white;
+}
+
+.button-close{
+	background-color: rgba(255, 0, 0, 0.3);
+	transition: all 0.5s ease;
+}
+.button-close:hover{
+	background-color: rgba(255, 0, 0, 0.6);
+	box-shadow: inset 0px 0px 5px rgb(255, 255, 255);
+	color: white;
+}
+
+.button-minus{
+	background-color: rgba(255, 0, 0, 0.1);
+	transition: all 0.5s ease;
+}
+.button-minus:hover{
+	background-color: rgba(255, 0, 0, 0.6);
+	box-shadow: inset 0px 0px 5px rgb(255, 255, 255);
+	color: white;
+}
+
+.button-plus{
+	background-color: rgba(54, 255, 131, 0.1);
+	transition: all 0.5s ease;
+}
+.button-plus:hover{
+	background-color: rgba(51, 172, 98, 0.6);
+	color: white;
+	box-shadow: inset 0px 0px 5px rgb(255, 255, 255);
+}
