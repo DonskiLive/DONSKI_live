@@ -5,47 +5,32 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rubiks Cube</title>
+	<title>Кубик-Рубикус</title>
 	<link rel="shortcut icon" href="./img/web_icon.png" type="image/png">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet">
-	<link rel="stylesheet" href="./css/all.min.css">
-
-	<link rel="stylesheet" href="./css/animate.min.css">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./index.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
 	<div class="main">
+		<div class="loading">
+			<svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+				<circle cx="170" cy="170" r="160" stroke="black" />
+				<circle cx="170" cy="170" r="135" stroke="yellow" />
+				<circle cx="170" cy="170" r="110" stroke="black" />
+				<circle cx="170" cy="170" r="85" stroke="yellow" />
+			</svg>
+		</div>
 		<!-- Header -->
 		<header id="header">
 			<div class="container">
-				<nav>
-					<div id="navToggle" class="animate__animated animate__fadeIn slow">
-						<input type="checkbox">
-						<span></span>
-						<span></span>
-						<span></span>
-						<ul id="dropdown">
-							<li><a class="drop-link" href="#">Главная</a></li>
-							<li><a class="drop-link" href="#container-1">Новости</a></li>
-							<li><a class="drop-link" href="#section-2">Инструкции</a></li>
-							<li><a class="drop-link" href="#section-3">Комментарии</a></li>
-						</ul>
-					</div>
-				</nav>
-				<div class="nav-logo animate__animated animate__fadeIn slow">
+				<div class="nav-logo">
 					<div
-						class="row mb-4 justify-content-lg-between justify-content-sm-center text-lg-start text-sm-center row">
-						<div class="col-2 text-start sm-hidden">
-							<img class="navbar-brand animate__animated animate__fadeInDown slow ms-2" id="logo"
-								src="./img/gw6.gif" alt="logo">
+						class="row mb-4 justify-content-lg-between justify-content-sm-center text-lg-start text-sm-center">
+						<div class="col-2 col-sm-0 text-start sm-hidden">
+							<img class="navbar-brand ms-2" id="logo" src="./img/gw6.gif" alt="logo">
 						</div>
-						<div class="col-lg-5 col-md-8 logo-name ms-2 text-center">
+						<div class="col-lg-5 col-md-10 col-10 logo-name ms-2 text-center">
 							<span>К</span>
 							<span>у</span>
 							<span>б</span>
@@ -60,15 +45,30 @@
 							<span>у</span>
 							<span>с</span>
 						</div>
-						<!-- Navigation -->
-						<div class="col-2 text-end sm-hidden">
-							<img class="navbar-brand animate__animated animate__fadeInDown slow" id="logo"
-								src="./img/gw6.gif" alt="logo">
+						<div class="col-2 text-end">
+							<!-- Navigation start -->
+							<nav>
+								<div id="navToggle">
+									<input type="checkbox">
+									<span></span>
+									<span></span>
+									<span></span>
+									<ul id="dropdown">
+										<li class="navigation">Навигация</li>
+										<li><a class="drop-link" href="#">Главная</a></li>
+										<li><a class="drop-link" href="#container-1">Новости</a></li>
+										<li><a class="drop-link" href="#section-2">Инструкции</a></li>
+										<li><a class="drop-link" href="#section-3">Комментарии</a></li>
+										<li><a class="drop-link" href="#section-4">Фото галерея</a></li>
+									</ul>
+								</div>
+							</nav>
+							<!-- Navigation end -->
 						</div>
 					</div>
 				</div>
 				<!-- content start -->
-				<div class="wrap sm-hidden">
+				<div id="cube-3d" class="wrap">
 					<div class="cube">
 						<div class="front">
 						</div>
@@ -89,7 +89,7 @@
 					<h1 class="text-uppercase mb-3">Головоломки - наша зависимость <i class="far fa-smile-wink"></i>
 					</h1>
 					<a href="#"
-						class="main-btn text-uppercase fs-5 py-2 mx-auto animate__animated animate__tada">Присоединяйся</a>
+						class="main-btn text-uppercase fs-5 py-2 mx-auto animate__animated animate__tada animate__delay-4s">Присоединяйся</a>
 				</div>
 				<!-- content end -->
 			</div>
@@ -110,8 +110,8 @@
 									2017 года. <br> <b>Текущий Мировой рекорд</b> был установлен в ноябре 2018 года
 									(<b>3,47 секунды</b>).</span>
 								<br>
-								<span id="more"><img src="./img/icons8-50.png" alt="book"> Чтобы узнать больше,
-									просто наведи на меня!</span>
+								<span id="more" class="ding-ding"><img src="./img/icons8-50.png" alt="book"> Узнай
+									больше - наведи на меня!</span>
 							</div>
 						</div>
 						<p class="offer_text">
@@ -137,7 +137,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-lg-5 ms-lg-auto sm-hidden">
+					<div id="phone" class="col-lg-5 ms-lg-auto">
 						<div class="phone-block ding-ding">
 							<video src="./img/3-3.mp4" id="video-3x3" controls autoplay muted loop></video>
 						</div>
@@ -151,7 +151,7 @@
 			<div class="container">
 				<div class="container-sm cont-color">
 					<div class="row text-center py-5">
-						<h2>КАК СОБРАТЬ КУБИК РУБИКА 3х3</h2>
+						<h2>КАК СОБРАТЬ <br> КУБИК РУБИКА 3х3</h2>
 						<p class="mb-2">
 							Cамый простой способ!!!
 						</p>
@@ -304,7 +304,8 @@
 
 			<section id="game-section">
 				<div class="container">
-					<h2 class="pb-4">больше <span id="orange-line">игр в нашем прил</span>ожении</h2>
+					<h2>больше игр в нашем приложении</h2>
+					<div class="divider"></div>
 					<div class="game">
 						<div class="game-card num1 zoom">
 							<div class="game-content"></div>
@@ -322,20 +323,34 @@
 							<div class="game-content"></div>
 							<h2>Домино</h2>
 						</div>
-						<div class="game-card num5 zoom">
-							<div class="game-content"></div>
-							<h2>Бильярд</h2>
-						</div>
 					</div>
 				</div>
 			</section>
 		</section>
 		<!-- Section 3 end -->
+		<!-- Section 4 start -->
+		<section id="section-4">
+			<video class="video" loop="loop" autoplay="" muted="">
+				<source src="./img/video-bg.mp4" type="video/mp4" />
+			</video>
+			<div class="photos-header">
+				<img src="https://denis-creative.com/wp-content/uploads/2018/01/about-header-bg-2.png"
+					class="photos-header-bg-2" alt="">
+			</div>
+			<div class="photos-title">Наши успехи в чемпионатах</div>
+			<div id="grid">
+				<div class="photo-1"></div>
+				<div class="photo-2"></div>
+				<div class="photo-3"></div>
+			</div>
+			<div class="photos-footer"></div>
+		</section>
+		<!-- Section 4 end -->
 		<!-- Footer start -->
 		<footer id="footer" class="container-fluid text-white">
 			<div class="row justify-content-between align-items-center">
 				<div class="col-4">
-					<p>&copy; 2021 Кубик-Рубикус</p>
+					<pre>    &copy; 2021 <br> Кубик-Рубикус</pre>
 				</div>
 
 				<div class="col-3 text-center">
