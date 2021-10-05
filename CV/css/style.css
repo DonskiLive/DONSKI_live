@@ -18,7 +18,7 @@
   }
   
   .image img{
-	  width: 30px;
+	  width: 31px;
 	  margin-right: 20px;
   }
   
@@ -63,12 +63,12 @@
   
   .resume .resume_left {
 	width: 280px;
-	background: #0bb5f4;
+	background: #0091c5;
   }
   
   .resume .resume_left .resume_profile {
 	width: 100%;
-	height: 310px;
+	height: 315px;
   }
   
   .resume .resume_left .resume_profile img {
@@ -96,6 +96,11 @@
 	padding: 25px 0;
 	border-bottom: 2px solid #b1eaff;
   }
+
+  .resume .resume_item2 {
+	padding: 25px 0;
+	border-bottom: 2px solid #0091c5;
+  }
   
   .resume .resume_left .resume_item:last-child,
   .resume .resume_right .resume_item:last-child {
@@ -116,7 +121,7 @@
 	width: 35px;
 	height: 35px;
 	background: #fff;
-	color: #0bb5f4;
+	color: #0091c5;
 	border-radius: 50%;
 	margin-right: 15px;
 	font-size: 16px;
@@ -144,19 +149,19 @@
   }
   
   .resume .resume_left .resume_skills ul li .skill_name {
-	width: 25%;
+	width: 40%;
   }
   
   .resume .resume_left .resume_skills ul li .skill_progress {
-	width: 60%;
+	width: 70%;
 	margin: 0 5px;
 	height: 5px;
-	background: #009fd9;
+	background: #0091c5;
 	position: relative;
   }
   
   .resume .resume_left .resume_skills ul li .skill_per {
-	width: 15%;
+	width: 5%;
   }
   
   .resume .resume_left .resume_skills ul li .skill_progress span {
@@ -179,7 +184,7 @@
   }
   
   .resume .resume_right .bold {
-	color: #0bb5f4;
+	color: #0091c5;
   }
   
   .resume .resume_right .resume_work ul,
@@ -215,7 +220,7 @@
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
-	border: 2px solid #0bb5f4;
+	border: 2px solid #0091c5;
 	background-color: #fff;
   }
   
@@ -227,7 +232,7 @@
 	left: -21px;
 	width: 2px;
 	height: 115px;
-	background: #0bb5f4;
+	background: #0091c5;
   }
   
   .line-length1:after{
@@ -242,10 +247,10 @@
   .resume .resume_right .resume_hobby ul li {
 	width: 80px;
 	height: 80px;
-	border: 2px solid #0bb5f4;
+	border: 2px solid #0091c5;
 	border-radius: 50%;
 	position: relative;
-	color: #0bb5f4;
+	color: #0091c5;
   }
   
   .resume .resume_right .resume_hobby ul li i {
@@ -259,7 +264,7 @@
 	right: -52px;
 	width: 50px;
 	height: 2px;
-	background: #0bb5f4;
+	background: #0091c5;
 	background-color: #fff;
   }
   
