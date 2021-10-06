@@ -1,4 +1,74 @@
-import { useState } from 'react'
+import Field from './Field'
+import Textarea from './Textarea'
+import Select from './Select'
+import { useForm } from "react-cool-form";
+import { connect } from 'react-redux';
+import { addComment } from '../store/booksReducer/BooksActionsCreator';
+
+const NewComment = ({addCommentToBook, bookId}) => {
+	const { form, use } = useForm({
+		defaultValues: { name: '', text: '', note: '' },
+		onSubmit: (values, { reset }) => {
+			addCommentToBook(bookId, {...values, id: Date.now(), bookId, like: 0, dislike: 0 })
+			reset()
+		}
+	})
+	const errors = use('errors', { errorWithTouched: true })
+
+	return (
+		<div className=" mx-auto mb-3 text-start">
+			<h3 className="text-center">Add your comment</h3>
+			<form ref={form} noValidate>
+				<Field
+					label="Your name"
+					id="name"
+					name="name"
+					placeholder="type your name"
+					required
+					minLength={4}
+					error={errors.name}
+				>
+				</Field>
+				<Textarea
+					label="Your comment"
+					id="text"
+					name="text"
+					required
+					placeholder="type your comment"
+					error={errors.text}
+				>
+				</Textarea>
+				<Select
+					label="Your note"
+					id ='note'
+					name='note'
+					required
+					error={errors.note}
+					placeholder="type your comment"
+				>
+						<option value="" disabled>Select rate</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+				</Select>
+				<input type="submit" className="btn btn-primary mt-2 w-100"/>
+			</form>
+		</div>)
+}
+
+const mapDispatchToProps = dispatch =>{
+    return{
+        addCommentToBook: (id, comment)=>{dispatch(addComment(id, comment))}
+    }
+}
+
+export default connect (null, mapDispatchToProps)(NewComment) 
+
+
+
+/* import { useState } from 'react'
 import { connect } from 'react-redux';
 import { setBooks } from '../store/booksReducer/BooksActionsCreator';
 
@@ -92,4 +162,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(NewComment)
+export default connect(null, mapDispatchToProps)(NewComment) */

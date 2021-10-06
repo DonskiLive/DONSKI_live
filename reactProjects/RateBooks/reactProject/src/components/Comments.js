@@ -1,17 +1,19 @@
 import Comment from './Comment'
 
 const Comments = ({comments})=>{
-    console.log(comments)
     return(
-        <ul className = 'list-unstyled overflow-scroll' style={{height: '155px'}}>
-            {
-                comments.map(comment =>(
-                    <li className = 'mb-1 text-start' key ={comment.id}>
-                        {<Comment comment = {comment} />}
+        <>
+        {comments.length ? <><h3 className="m-0 p-0">Comments</h3>
+          
+        <ul className = 'list-unstyled overflow-scroll' style={{height: '175px'}}>
+                {comments.map(comment =>(
+                    <li className = 'text-start' key ={comment.id}>
+                        {<Comment comment = {comment} /> }
+                       
                     </li>
-                ))
-            }
-        </ul>
+                ))}
+        </ul></> : <></>}
+        </>
     )
 }
 
