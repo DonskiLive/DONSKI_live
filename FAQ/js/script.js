@@ -1,3 +1,8 @@
+
+
+
+
+
 const items = document.querySelectorAll(".accordion button");
 
 function toggleAccordion() {
@@ -13,3 +18,4 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
