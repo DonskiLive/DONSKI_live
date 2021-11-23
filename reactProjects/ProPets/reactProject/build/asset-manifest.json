@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eee1278f.chunk.css",
+    "main.js": "/static/js/main.af06c24b.chunk.js",
+    "main.js.map": "/static/js/main.af06c24b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.64afc4e9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.64afc4e9.js.map",
+    "static/css/2.9423e317.chunk.css": "/static/css/2.9423e317.chunk.css",
+    "static/js/2.df24f07b.chunk.js": "/static/js/2.df24f07b.chunk.js",
+    "static/js/2.df24f07b.chunk.js.map": "/static/js/2.df24f07b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.9423e317.chunk.css.map": "/static/css/2.9423e317.chunk.css.map",
+    "static/css/main.eee1278f.chunk.css.map": "/static/css/main.eee1278f.chunk.css.map",
+    "static/js/2.df24f07b.chunk.js.LICENSE.txt": "/static/js/2.df24f07b.chunk.js.LICENSE.txt",
+    "static/media/8347@2x.b002b62a.png": "/static/media/8347@2x.b002b62a.png",
+    "static/media/Group 11.fed9b943.svg": "/static/media/Group 11.fed9b943.svg",
+    "static/media/add_form_icon.2114fa53.svg": "/static/media/add_form_icon.2114fa53.svg",
+    "static/media/logo-green.1face7e6.svg": "/static/media/logo-green.1face7e6.svg",
+    "static/media/logo-white.a2df117e.svg": "/static/media/logo-white.a2df117e.svg",
+    "static/media/App.css": "/static/media/puppy-bg.7124c907.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.64afc4e9.js",
+    "static/css/2.9423e317.chunk.css",
+    "static/js/2.df24f07b.chunk.js",
+    "static/css/main.eee1278f.chunk.css",
+    "static/js/main.af06c24b.chunk.js"
+  ]
+}
