@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../css/style_basic.css">
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+	<script src="../js/script_4.js" defer></script>
+	<title>Vertical slider</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<h1 class="title">Slider Swiper (type: progressbar with scrollbar) Vertical Slider</h1>
+		<!-- Flex container -->
+		<div class="block">
+			<!-- Flex element -->
+			<div class="block__side">
+				<a href="../1_bullets/index.html">Swiper type: 'bullets' (default)</a>
+				<a href="../2_fraction/index.html">Swiper type: 'fraction' + Settings</a>
+				<a href="../3_progressbar/index.html">Swiper type: 'progressbar'</a>
+				<a href='#' class='active'>Swiper type: 'progressbar' Vertical</a>
+				<a href="../5_preview/index.html">Swiper type: 'preview'</a>
+				<a href="../6_controlled/index.html">Swiper type: 'controlled by other'</a>
+				<a href="../7_parallax/index.html">Swiper type: 'parallax slider'</a>
+				<a href='../8_virtual/index.html'>Swiper type: 'generated slides'</a>
+			</div>
+			<!-- Flex element -->
+			<div class="block__body">
+				<!-- Slider -->
+				<div class="image-slider swiper">
+					<div class="image-slider__wrapper swiper-wrapper">
+						<div class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img src="../img/img_deu.png" alt="deu">
+							</div>
+						</div>
+						<div class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img src="../img/img_pln.png" alt="pln">
+							</div>
+						</div>
+						<div class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img src="../img/img_rus.png" alt="rus">
+							</div>
+						</div>
+						<div class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img src="../img/img_ukr.png" alt="ukr">
+							</div>
+						</div>
+					</div>
+					<!-- Adding arrows -->
+					<div class="swiper-button-next" style="margin-right: 50px"></div>
+					<div class="swiper-button-prev" style="margin-left: 50px"></div>
+					<!-- Add if you need pagination -->
+					<div class="swiper-pagination"></div>
+					<!-- Add if you need scrollbar -->
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

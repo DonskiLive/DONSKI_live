@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer></script>
+	<script src="../js/script_2.js" defer></script>
+	<title>Fraction slider</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<h1 class="title">Slider Swiper (type: fraction + scroll + add setting + hash)</h1>
+		<!-- Flex container -->
+		<div class="block">
+			<!-- Flex element -->
+			<div class="block__side">
+				<a href="../1_bullets/index.html">Swiper type: 'bullets' (default)</a>
+				<a href='#' class='active'>Swiper type: 'fraction' + Settings</a>
+				<a href="../3_progressbar/index.html">Swiper type: 'progressbar'</a>
+				<a href="../4_vertical/index.html">Swiper type: 'progressbar' Vertical</a>
+				<a href="../5_preview/index.html">Swiper type: 'preview'</a>
+				<a href="../6_controlled/index.html">Swiper type: 'controlled by other'</a>
+				<a href="../7_parallax/index.html">Swiper type: 'parallax slider'</a>
+				<a href='../8_virtual/index.html'>Swiper type: 'generated slides'</a>
+			</div>
+			<!-- Flex element -->
+			<div class="block__body">
+				<!-- Slider -->
+				<div class="image-slider swiper">
+					<!-- add dir='rtl' into div if you want change direction of swipes (useful for some countries) -->
+					<!-- Hash navigation -->
+					<div class="image-slider__wrapper swiper-wrapper">
+						<div data-hash="slide-1" class="image-slider__slide swiper-slide">
+							<div class="image-slider__image swiper-zoom-container">
+								<img data-src="../img/img_deu.png" class='swiper-lazy' alt="deu">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div data-hash="slide-2" class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img data-src="../img/img_pln.png" class='swiper-lazy' alt="pln">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div data-hash="slide-3" class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img data-src="../img/img_rus.png" class='swiper-lazy' alt="rus">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div data-hash="slide-4" class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img data-src="../img/img_ukr.png" class='swiper-lazy' alt="ukr">
+								<div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<!-- 						<div data-hash="slide-5" class="image-slider__slide swiper-slide">
+							<div class="image-slider__image">
+								<img src="./img/img_eng.png" alt="eng">
+							</div>
+						</div> -->
+					</div>
+					<!-- Adding arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<!-- Add if you need pagination -->
+					<div class="swiper-pagination"></div>
+					<!-- Add if you need scrollbar -->
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

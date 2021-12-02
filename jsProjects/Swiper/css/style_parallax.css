@@ -1,0 +1,130 @@
+/* Reset */
+*,
+*::before,
+*::after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul, ol, li{
+	list-style: none;
+}
+
+img{
+	vertical-align: top; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html, body {
+	height: 100%;
+	line-height: 1;
+	font-size: 14px;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+	padding: 30px;
+	min-height: 100%
+}
+
+/* -------------- */
+
+.title{
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+	margin: 0px 0px 30px 0px;
+}
+
+/* Flex */
+.block{
+	display: flex;
+}
+
+.block__side{
+	padding-top: 10px;
+	flex: 0 0 300px;
+	background-color: #77608d
+}
+
+.block__body{
+	padding: 0px 0px 0px 30px;
+	flex: 1 1 auto;
+
+	min-width: 0; /* ! for flex container */
+}
+
+.block__side a{
+	display: block;
+	font-size: 16px;
+	padding: 5px 10px;
+	color: white;
+}
+
+.block__side a:hover{
+	color:rgb(215, 233, 250)
+}
+
+/* -------------- */
+
+
+.active{
+	color:rgb(136, 197, 255) !important;
+}
+
+/* Arrows */
+.parallax-slider .swiper-button-prev::after,
+.parallax-slider .swiper-button-next::after{
+	color: #fff;
+	font-size: 60px;
+}
+/* -------------- */
+
+/* Parallax Slider */
+.parallax-slider{
+	height: 600px;
+	position: relative;
+}
+
+.parallax-slider__bg{
+	height: 600px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 130%;
+	height: 100%;
+	background: linear-gradient(
+		180deg,
+		rgba(0,0,0,1) 0%,
+		rgba(0,0,0,0.4) 100%), url(../img/img_10.jpeg) left;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.parallax-slider__slide{
+	font-size: 20px;
+	line-height: 150%;
+	color: rgb(255, 255, 255);
+}
+
+.parallax-slider__slide h2{
+	font-size: 30px;
+	font-weight: 700;
+	margin: 15px 100px;
+}
+
+.parallax-slider__slide p{
+	margin: 15px 100px;
+}

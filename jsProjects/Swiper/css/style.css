@@ -1,0 +1,285 @@
+/* Reset */
+*,
+*::before,
+*::after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul, ol, li{
+	list-style: none;
+}
+
+img{
+	vertical-align: top; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html, body {
+	height: 100%;
+	line-height: 1;
+	font-size: 14px;
+	background-color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+	padding: 30px;
+	min-height: 100%
+}
+
+/* -------------- */
+
+.title{
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+	margin: 0px 0px 30px 0px;
+}
+
+/* Flex */
+.block{
+	display: flex;
+}
+
+.block__side{
+	padding-top: 10px;
+	flex: 0 0 300px;
+	background-color: #77608d
+}
+
+.block__body{
+	padding: 0px 0px 0px 30px;
+	flex: 1 1 auto;
+
+	min-width: 0; /* ! for flex container */
+}
+
+.block__side a{
+	display: block;
+	font-size: 16px;
+	padding: 5px 10px;
+	color: white;
+}
+
+.block__side a:hover{
+	color:rgb(215, 233, 250)
+}
+
+/* -------------- */
+
+.image-slider{
+	padding: 30px 0 70px 0;
+}
+
+/* .image-slider__wrapper{
+}
+.image-slider__slide{
+} */
+
+.image-slider__image{
+	text-align: center;
+}
+.image-slider__image img{
+	max-width: 100%;
+}
+
+.active{
+	color:rgb(136, 197, 255) !important;
+}
+
+/* Arrows */
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after{
+	color: #fff;
+	font-size: 80px;
+}
+/* -------------- */
+
+/* Pagination */
+.image-slider .swiper-pagination{
+	bottom: 0;
+}
+/* Bullets  */
+.image-slider .swiper-pagination-bullet{
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	background-color: #ffff; 
+}
+/* -------------- */
+
+/* Fraction */
+.image-slider .swiper-pagination-fraction{
+	font-size: 20px;
+	color: #fff;
+	margin-bottom: 20px
+}
+
+/* Progressbar */
+.image-slider .swiper-pagination-progressbar-fill{
+	background-color: #7a956b;
+}
+
+/* Scroll */
+.image-slider .swiper-scrollbar-drag{
+	cursor: pointer;
+	background-color: #7a956b;
+}
+
+/* Auto-width */
+.image-slider .swiper-slide{
+	width: auto;
+}
+
+/* Multi columns of slides */
+/* .image-slider {
+	height: 700px;
+}
+.image-slider .swiper-slide{
+	height: calc((100% - 30px) / 2);
+	overflow: hidden;
+} */
+
+/* Miniatures Preview */
+.image-mini-slider{
+}
+.image-mini-slider__wrapper{
+}
+.image-mini-slider__slide{
+	opacity: 0.2;
+	transition: opacity 0.3s ease 0s;
+}
+.image-mini-slider__slide.swiper-slide-thumb-active{
+	opacity: 1;
+}
+.image-mini-slider__image{
+	position: relative;
+	padding: 0px 0px 30% 0px;
+	cursor: pointer;
+}
+.image-mini-slider__image img{
+	margin: 0px 100px;
+	object-fit: cover;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+/* Slider in slider */
+.image-in-slider{
+	height: 500px;
+}
+
+.image-in-slider-wrapper{
+}
+
+.image-in-slider__slide{
+	height: 500px;
+}
+
+.image-in-slider__image img{
+	/* height: 450px !important; */
+	max-width: 100%;
+}
+
+/* Control Transfer between sliders Text slider */
+.text{
+	font-size: 25px;
+	line-height: 150%;
+	color: #fff;
+	margin: 50px 0;
+	background-color: #77608d;
+	padding: 10px;
+}
+
+.text-slider{
+}
+
+.text-slider__wrapper{
+}
+
+.text-slider__slide{
+	font-size: 25px;
+	line-height: 150%;
+	color: #fff;
+}
+
+.text-slider__slide h2{
+	font-size: 40px;
+	font-weight: 700;
+	margin: 0px 0px 15px 0px;
+}
+
+/* Parallax Slider */
+
+.parallax-slider{
+	position: relative;
+}
+
+.parallax-slider__wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.parallax-slider__bg{
+	height: 200px;
+	background: url(../img/img_10.jpeg) left center;
+	background-size: 100%;
+}
+
+.parallax-slider__slide{
+	font-size: 20px;
+	line-height: 150%;
+	color: #fff;
+}
+
+.parallax-slider__slide h2{
+	font-size: 30px;
+	font-weight: 700;
+	margin: 15px 100px;
+}
+
+.parallax-slider__slide p{
+	margin: 15px 100px;
+}
+
+
+/* Generated sliders */
+.image-slider__text{
+	margin-top: 40px;
+	font-size: 30px;
+	line-height: 150%;
+	color: #fff;
+}
+
+/* add Fraction */
+.image-slider__fraction{
+	padding: 20px 0px 0px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	color: #fff;
+}
+.image-slider__current{
+}
+
+.image-slider__separator{
+	margin: 0px 15px;
+}
+
+.image-slider__total{
+}
