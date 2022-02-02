@@ -1,0 +1,13 @@
+body{
+  position: relative;
+  min-width: 350px !important;
+  background-image: linear-gradient(rgb(180, 180, 180, 0.5), rgb(255, 255, 255));
+	min-height: calc(100vh);
+	height: fit-content; 
+	background-repeat: none;
+	background-size: cover;
+}
+
+.card-body{
+	padding-bottom: 8px !important;
+}

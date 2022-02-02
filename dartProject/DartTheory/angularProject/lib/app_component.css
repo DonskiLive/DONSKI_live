@@ -1,0 +1,16 @@
+.app-footer{
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+.my-link{
+	color: white;
+	text-decoration: none;
+}

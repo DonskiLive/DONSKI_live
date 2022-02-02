@@ -1,0 +1,144 @@
+<!-- Navigation Menu start -->
+<nav class='navbar navbar-expand-lg navbar-light bg-dark mb-3 text-white shadow-sm'>
+	<div class="nav">
+		<input type="checkbox" id="navBtn" #checkbox="ngForm" (click)='onClickHandle(checkbox.checked!)' />
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<h2 class="navbar-brand title text-white">Angular/Dart Theory</h2>
+	<button class="btn btn-block btn-lg btn-outline-light fs-6 me-2" [attr.data-bs-toggle]="'modal'"
+		[attr.data-bs-target]="'#exampleModal'" title='Add new Theory'>Add</button>
+</nav>
+
+<ul class="main-nav shadow" [class.ml-200]="checkbox.checked!">
+	<li *ngFor='let bookmark of bookmarks; let $i = index'>
+		<p class="dropdown-item" (click)='linkHandle($event, checkbox, $i)' [attr.data-bs-toggle]="'modal'"
+			[attr.data-bs-target]="'#staticBackdrop'" title="Open Theory">{{bookmark.title}}</p>
+	</li>
+</ul>
+
+<div [class.blur-bg]="checkbox.checked!"></div>
+<!-- Navigation Menu end -->
+
+<div class='container pb-5'>
+	<!-- App Content start -->
+	<div class="row">
+		<div class="col-sm-12" *ngIf='bookmarks.isEmpty'>
+			<div class="alert text-center">
+				<template [ngIf]="!isLoading">
+					No bookmarks added
+				</template>
+				<template [ngIf]="isLoading">
+					Loading bookmarks from database...
+				</template>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 mb-3" *ngFor='let bookmark of bookmarks; let $i = index'>
+			<div class="card h-100 rounded-3 card-bg" [class.card-bg-light]="bookmark.edit">
+				<div class="card-body d-flex flex-column" *ngIf="!bookmark.edit">
+					<h5 class="card-title">{{bookmark.title}}</h5>
+					<textarea class="card-text text-description" disabled>{{bookmark.description}}</textarea>
+					<div class='edit-btn' title='Edit Theory'>
+						<svg (click)="editBookmark($i)" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+							<path
+								d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+							<path fill-rule="evenodd"
+								d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+						</svg>
+					</div>
+				</div>
+				<p [hidden]="bookmark.edit" class="card-text url-link mt-2">Related Link: <a [href]="bookmark.url"
+						target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+							fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+							<path
+								d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+							<path
+								d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+						</svg></a></p>
+				<div [hidden]="bookmark.edit" class="open-btn" [attr.data-bs-toggle]="'modal'"
+					[attr.data-bs-target]="'#staticBackdrop'" title="Open Theory" (click)="showBookmark($i)">Open</div>
+				<div class="card-body" *ngIf="bookmark.edit">
+
+					<edit-form [bookmark]='bookmark' (onDelete)='removeBookmark($i)' (onUpdate)='updateBookmark($i)'></edit-form>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- App Content end -->
+
+	<!-- Modal Add New Theory start -->
+	<div class="modal fade modal-add-new" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Add new Theory</h5>
+					<button type="button" class="btn-close" [attr.data-bs-dismiss]="'modal'"
+						aria-label="Close"></button>
+				</div>
+				<form #newBmForm='ngForm' (ngSubmit)='onSubmitAddNew(newBmForm)'>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for='bm-form-title'>Title</label>
+							<input type='text' name='title' id='bm-form-title' class='form-control' ngControl='title'
+								required #title='ngForm' [class.is-invalid]="!title.valid! && title.dirty!" />
+							<div [class.warning-container]="!title.valid! && title.dirty!" class='warning-feedback'>
+								Please enter a
+								title</div>
+						</div>
+						<div class="form-group">
+							<label for='bm-form-description'>Description</label>
+							<textarea name='description' id='bm-form-description' #description='ngForm' required
+								class='form-control' ngControl='description'
+								[class.is-invalid]="!description.valid! && description.dirty!">
+							</textarea>
+							<div [class.warning-container]="!description.valid! && description.dirty!"
+								class='warning-feedback'>
+								Please enter a description</div>
+						</div>
+						<div class="form-group mb-2">
+							<label for='bm-form-url'>Url</label>
+							<input type='url' name='url' id='bm-form-url' class='form-control' required ngControl='url'
+								#url='ngForm' [class.is-invalid]="!url.valid! && url.dirty!" />
+							<div [class.warning-container]="!url.valid! && url.dirty!" class='warning-feedback'>Please
+								enter a valid
+								URL</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" id='modal-close'
+							[attr.data-bs-dismiss]="'modal'" (click)="newBmForm.reset()">Close</button>
+						<button class="btn btn-primary">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Modal Add New Theory end -->
+
+	<!-- Modal Open Theory start -->
+	<div class="modal fade" id="staticBackdrop" [attr.data-bs-backdrop]="'static'" [attr.data-bs-keyboard]="'false'"
+		tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">{{openBookmark.title!}}</h5>
+					<button type="button" class="btn-close" [attr.data-bs-dismiss]="'modal'"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<textarea class="card-text text-description modal-description"
+						disabled>{{openBookmark.description!}}</textarea>
+					<p class='mb-0'>More info here: <a href='openBookmark.url'>{{openBookmark.url!}}</a></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" [attr.data-bs-dismiss]="'modal'">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal Open Theory end -->
+</div>

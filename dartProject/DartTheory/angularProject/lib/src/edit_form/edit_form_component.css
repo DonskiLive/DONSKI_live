@@ -1,0 +1,26 @@
+.buttons{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: flex-end;
+	margin-top: 10px;
+}
+
+.close-btn{
+	position: absolute;
+	right: 8px;
+	top: 3px;
+	color: rgba(0, 0, 0, 0.7);
+	transition: all 0.5s ease;
+}
+
+.close-btn:hover{
+	cursor: pointer;
+	color: rgba(0, 0, 0, 1);
+	transform: scale(1.3);
+}
+
+.save-btn{
+	width: 100%;
+}

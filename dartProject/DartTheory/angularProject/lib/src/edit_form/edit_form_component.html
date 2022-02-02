@@ -1,0 +1,49 @@
+<!-- Edit Theory start -->
+<form #bmForm='ngForm' (ngSubmit)='updateBookmark(bmForm)' novalidate>
+	<div class="form-group">
+		<label for='bm-form-title'>Title</label>
+		<input type='text' name='title' id='bm-form-title' class='form-control' placeholder='title' required
+			[(ngModel)]="editedBookmark.title" #title="ngForm" ngControl='title'
+			[class.is-valid]="title.valid! && title.dirty!"
+			[class.is-invalid]="(!title.valid! && title.dirty!) || (submitted && !title.valid!)" />
+		<div [hidden]="title.valid! || (title.pristine! && !submitted)" class='invalid-feedback'>Please enter a title
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for='bm-form-description'>Description</label>
+		<textarea name='description' id='bm-form-description' class='form-control' placeholder='description'
+			[(ngModel)]="editedBookmark.description" #description="ngForm"
+			[class.is-valid]="description.dirty! && description.valid!">
+		</textarea>
+	</div>
+	<div class="form-group mb-2">
+		<label for='bm-form-url'>Url</label>
+		<input type='url' name='url' id='bm-form-url' class='form-control' placeholder='url' required
+			[(ngModel)]="editedBookmark.url" #url='ngForm' [class.is-valid]="url.valid! && url.dirty!"
+			[class.is-invalid]="(!url.valid! && url.dirty!) || (submitted && !url.valid!)" ngControl='url' />
+
+		<div [hidden]="url.valid! || (url.pristine! && !submitted)" class='invalid-feedback'>Please enter a URL</div>
+	</div>
+	<div class="buttons">
+		<button class="btn btn-success save-btn" title='Save changes'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+				fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+				<path
+					d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+			</svg></button>
+		<div class='close-btn' *ngIf="bookmark.id != ''" (click)="bookmark.edit = false" title='Cancel'>
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle"
+				viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+				<path
+					d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+			</svg>
+		</div>
+		<button class="btn btn-danger" type='button' (click)="removeBookmark(bookmark)" title='Delete Theory'>		<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+			fill="currentColor" class="bi bi-trash3" title="delete" viewBox="0 0 16 16">
+			<path fill-rule="evenodd"
+				d="M6.5 1a.5.5 0 0 0-.5.5v1h4v-1a.5.5 0 0 0-.5-.5h-3ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1H3.042l.846 10.58a1 1 0 0 0 .997.92h6.23a1 1 0 0 0 .997-.92l.846-10.58Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+		</svg></button>
+	</div>
+</form>
+<!-- Edit Theory end -->

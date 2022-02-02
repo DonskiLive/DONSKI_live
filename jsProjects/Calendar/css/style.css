@@ -217,7 +217,7 @@
 	  border-style: solid;
 	  border-width: 0 10px 10px 10px;
 	  border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
-	  transition: all 0.7s ease;
+	  /* transition: all 0.7s ease; */
 	  z-index: 1;
 	}
 	
